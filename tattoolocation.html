@@ -3,42 +3,159 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>leviathan</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-@media screen and (max-width: 500px) {
-  .titlename{
-     margin:0 auto;
-        margin-left: 18%;
-        margin-right:15%;
-        padding: 0;
-        
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.icon').click(function(){ 
+              $("nav").slideToggle("slow");
+            });
+      });
+      window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 400 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#hide img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-1980px'}, 500 );
+        $("#hide img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
 
-  }
-  div.titlename{
-    padding: 0;
-  }
-
-.Lo{
-        font-family:DINEngschriftStd;
+});
+      </script>
+<style type="text/css">#inforgraphic{
+        width:500px;
+        padding-top:100px;
         margin: 0 auto;
-        margin-top: 15px;
-       
-
     }
-    h3,{
-      font-size:1.3em;
-      margin: -20%;
-      text-align: left;
+    
+    #totalbox{
+        transform:scale(1.3,1.3);
     }
-    .text p:nth-of-type(2){
-text-align: left;
-margin-left: 18%;
-margin-top: 30px;
-margin-right: 10%;
+    svg #number{
+        opacity: 0;
     }
+    #totalbox:hover #typo{
+     opacity:0;
+     -webkit-transition: 0.4s ease;
+    }
+    #totalbox:hover #number{
+    opacity: 1;
+    -webkit-transform:translate(0px, -4px);
+    -webkit-transition: 0.3s 0.4s ease;
+    }
+    #bigcircle, #smallcircle{
+        -webkit-transform:scale(1,1);
+        opacity: .4;
+    }
+    #smallcircle{
+        -webkit-transform-origin:439px 168px;
+    }
+    #totalbox:hover #bigcircle{
+        opacity: 1;
+        -webkit-transition: 0.3s 0.4s ease;
+    }
+    #totalbox:hover #smallcircle{
+        opacity: 0.8;
+        
+        -webkit-transition: 0.3s 0.4s ease;
+        -webkit-transform:scale(1.3,1.3);
+    }
+ul{
+    list-style-type: none;
+}
+li{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: black;
 
 }
+a:hover{
+    color: red;
+}
+    .one {
+        background-color: black;
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        right: 1980px;
+        bottom: 0;
+        position: fixed;
+    
+    z-index: 5;
+    opacity: 0.9;
+    }
+    .one ul:first-of-type {
+        padding-top: 10%;
+    }
+    .one ul{
+        font-size: 30px;
+        text-align: center;
+        
+    }
+    .one ul li a{
+        color: lightgray;
+        font-family: DINEngschriftStd;
+    }
+    .one ul:first-child{
+        padding-bottom:20px;
+        border-bottom:solid 1px white;
+        font-family: DINEngschriftStd;
+    }
+#show, #hide  {
+        width: 10%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        -webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+    }
+
+    #show:hover, #hide:hover  {
+        -webkit-filter: brightness(100%) opacity() grayscale(0);
+    }
+
+    #hide {
+        display: none;
+    }
+    #show img, #hide img {
+        width: 20%;
+        margin-left: 35%;
+        float: left;
+        margin-top: 18%;
+        display: block;
+    }
+ .bars{
+        position:absolute;
+    width:33px;
+    height:18px;
+    margin-top:0px;
+    
+    left:50px;
+    top:35px;
+    font-size: 20px;
+    color: white;
+ }
+  .bars:hover{
+    
+    color: white;
+ }
+
 body{
   background-color: rgba(26, 26, 26, 1);
     color:lightgray;
@@ -63,10 +180,190 @@ body{
 
         h3{
             margin-top:50px;
+            color: rgb(200,10,10);
         }
+        @media screen and (max-width: 500px) {
+                       .one ul {
+            margin-left: -10%;
+        }
+        a{
+    font-size: 1.3em;
+}
+   .bars{
+    position:absolute;
+    margin-left: -35%;
+    font-size: 30px;
+    margin-top:-5px;
+    
+    left:50px;
+    top:35px;
+
+    }
+      .titlename img{
+      width: 250px;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+  .titlename{
+     margin:0 auto;
+        margin-left: 18%;
+        margin-right:15%;
+        padding: 0;
+        
+
+  }
+  div.titlename{
+    padding: 0;
+  }
+
+.Lo{
+        font-family:DINEngschriftStd;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-left: -25%;
+       
+    }
+    h3{
+      font-size:1.3em;
+      
+      margin-left: 24%;
+      text-align: left;
+    }
+    .text p:nth-of-type(2){
+text-align: left;
+margin-left: 24%;
+margin-top: 30px;
+margin-right: 10%;
+    }
+}
     </style>
     <body>
+  <header>
+    
+    <div id="show">
+        <i class="bars fa fa-bars"></i>
+    </div>
+    <div id="hide">
+        <i class="bars fa fa-bars"></i>
+    </div>
+</header>
 
+    <div class="one">
+<ul>
+    <li><a href="https://www.facebook.com/slow.steam?ref=ts&fref=ts" target="blank">Tattooist Low<a></li>
+</ul>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tattooabout.html">About</a></li>
+    <li><a href="tattooview.html" target="blank">Tattoo</a></li>
+    <li><a href="tattoolocation.html">Location</a></li>
+</ul>
+<div id="inforgraphic">
+
+<svg version="1.1" id="totalbox" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="566.93px" height="327.937px" viewBox="0 0 566.93 327.937" enable-background="new 0 0 566.93 327.937"
+     xml:space="preserve">
+<rect x="0" opacity="0" fill="#F7F6F4" width="566.93" height="327.937"/>
+<g id="total">
+    <g id="infor">
+        <text transform="matrix(1 0 0 1 14.9278 22.6436)" fill="#EC123E" font-family="'DINEngschriftStd'" font-size="15.4094">Cognition</text>
+        <text transform="matrix(1 0 0 1 287.9338 27.3759)" fill="#EC123E" font-family="'DINEngschriftStd'" font-size="18.9768">The Reason</text>
+        <g>
+            <text transform="matrix(1 0 0 1 14.9278 54.6653)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">관대 해졌다</text>
+            <text transform="matrix(1 0 0 1 14.9278 76.6653)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">유행 하는 것 같다.</text>
+            <text transform="matrix(1 0 0 1 14.9278 98.6653)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">흔하게 볼 수 있다.</text>
+            <text transform="matrix(1 0 0 1 14.9278 120.6653)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">자신을 표현하는 방법.</text>
+            <text transform="matrix(1 0 0 1 146.7101 55.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">10.9%</text>
+            <text transform="matrix(1 0 0 1 146.7101 77.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">10.7%</text>
+            <text transform="matrix(1 0 0 1 146.7101 99.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">20.3%</text>
+            <text transform="matrix(1 0 0 1 146.7101 121.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">18,8%</text>
+            <text transform="matrix(1 0 0 1 198.5392 55.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">20.3%</text>
+            <text transform="matrix(1 0 0 1 198.5392 77.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">26.3%</text>
+            <text transform="matrix(1 0 0 1 198.5392 99.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">32.2%</text>
+            <text transform="matrix(1 0 0 1 198.5392 121.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">27.2%</text>
+            <text transform="matrix(1 0 0 1 250.3667 55.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">68.6%</text>
+            <text transform="matrix(1 0 0 1 250.3667 77.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">63%</text>
+            <text transform="matrix(1 0 0 1 250.3667 99.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">47.5%</text>
+            <text transform="matrix(1 0 0 1 250.3667 121.5978)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">54%</text>
+            <text transform="matrix(1 0 0 1 146.7102 22.6434)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">비동의</text>
+            <text transform="matrix(1 0 0 1 198.5388 22.6434)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">보통</text>
+            <text transform="matrix(1 0 0 1 250.3666 22.6434)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">동의</text>
+        </g>
+        <text transform="matrix(1 0 0 1 14.9279 164.0934)" fill="#EC123E" font-family="'DINEngschriftStd'" font-size="15.4094">Want to do</text>
+        <text transform="matrix(1 0 0 1 14.9279 196.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">남성</text>
+        <text transform="matrix(1 0 0 1 14.9279 218.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">여성</text>
+        <text transform="matrix(1 0 0 1 14.9279 240.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">20대</text>
+        <text transform="matrix(1 0 0 1 14.9279 262.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">30대</text>
+        <text transform="matrix(1 0 0 1 14.9279 284.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">40대</text>
+        <text transform="matrix(1 0 0 1 14.9279 306.1151)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">50대</text>
+        <text transform="matrix(1 0 0 1 146.7101 197.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">36.6%</text>
+        <text transform="matrix(1 0 0 1 146.7101 219.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">40.4%</text>
+        <text transform="matrix(1 0 0 1 146.7101 241.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">30%</text>
+        <text transform="matrix(1 0 0 1 146.7101 263.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">30%</text>
+        <text transform="matrix(1 0 0 1 146.7101 285.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">42%</text>
+        <text transform="matrix(1 0 0 1 146.7101 307.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">52%</text>
+        <text transform="matrix(1 0 0 1 198.5392 197.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">30.6%</text>
+        <text transform="matrix(1 0 0 1 198.5392 219.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">22.8%</text>
+        <text transform="matrix(1 0 0 1 198.5392 241.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">24.4%</text>
+        <text transform="matrix(1 0 0 1 198.5392 263.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">30%</text>
+        <text transform="matrix(1 0 0 1 198.5392 285.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">27.2%</text>
+        <text transform="matrix(1 0 0 1 198.5392 307.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">25.2%</text>
+        <text transform="matrix(1 0 0 1 250.3667 197.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">32.8%</text>
+        <text transform="matrix(1 0 0 1 250.3667 219.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">36.8%</text>
+        <text transform="matrix(1 0 0 1 250.3667 241.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">45.6%</text>
+        <text transform="matrix(1 0 0 1 250.3667 263.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">40%</text>
+        <text transform="matrix(1 0 0 1 250.3667 285.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">30.8%</text>
+        <text transform="matrix(1 0 0 1 250.3667 307.0476)" fill="#E1DEDD" font-family="'DINEngschriftStd'" font-size="12">22.8%</text>
+        <text transform="matrix(1 0 0 1 146.7102 164.0933)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">비동의</text>
+        <text transform="matrix(1 0 0 1 198.5388 164.0933)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">보통</text>
+        <text transform="matrix(1 0 0 1 250.3666 164.0933)" fill="#E1DEDD" font-family="'YDIYGO320'" font-size="12">동의</text>
+        
+            <line fill="none" stroke="#F7F6F4" stroke-width="0.5" stroke-miterlimit="10" x1="14.928" y1="136.659" x2="272.701" y2="136.659"/>
+    </g>
+    <polygon id="poly" opacity="0.8" fill="#EC123E" enable-background="new    " points="459.373,153.573 463.302,184.919 
+        429.094,200.665 395.36,167.819 421.235,110.787  "/>
+    <g>
+        
+            <line opacity="0.4" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" enable-background="new    " x1="350.955" y1="167.819" x2="439.766" y2="167.819"/>
+        
+            <line opacity="0.4" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" enable-background="new    " x1="412.322" y1="252.283" x2="439.766" y2="167.819"/>
+        
+            <line opacity="0.4" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" enable-background="new    " x1="511.616" y1="220.021" x2="439.766" y2="167.819"/>
+        
+            <line opacity="0.4" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" enable-background="new    " x1="511.616" y1="115.616" x2="439.766" y2="167.819"/>
+        
+            <line opacity="0.4" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" enable-background="new    " x1="412.322" y1="83.354" x2="439.766" y2="167.819"/>
+    </g>
+    
+        <circle id="bigcircle" fill="none" stroke="#B5BBB9" stroke-width="0.5" stroke-miterlimit="10" cx="439.766" cy="167.818" r="88.811"/>
+    
+        <circle id="smallcircle" fill="none" stroke="#B5BBB9" stroke-width="1.3" stroke-miterlimit="10" cx="439.766" cy="167.818" r="16.23"/>
+    <g id="typo">
+        <g>
+            <text transform="matrix(1 0 0 1 519.0457 110.3984)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="15" letter-spacing="0.5px">influence</text>
+            <text transform="matrix(1 0 0 1 521.369 226.788)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="15" letter-spacing="0.5px">splash</text>
+            <text transform="matrix(1 0 0 1 285.7215 171.2235)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="15" letter-spacing="0.5px">expression</text>
+            <text transform="matrix(1 0 0 1 384.6541 272.9268)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="15" letter-spacing="0.5px">suggest</text>
+            <text transform="matrix(1 0 0 1 384.6541 70.9875)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="15" letter-spacing="0.5px">interest</text>
+        </g>
+    </g>
+    <g id="number">
+        <g>
+            <text transform="matrix(1 0 0 1 522.4064 110.7872)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="16.6553">10.0</text>
+            <text transform="matrix(1 0 0 1 522.4064 235.1523)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="16.6553">12.8</text>
+            <text transform="matrix(1 0 0 1 316.2443 175.8271)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="16.6553">25.2</text>
+            <text transform="matrix(1 0 0 1 388.3918 275.2573)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="16.6553">17.2</text>
+            <text transform="matrix(1 0 0 1 388.3918 76.6549)" fill="#F7F6F4" font-family="'DINEngschriftStd'" font-size="16.6553">68.4</text>
+        </g>
+    </g>
+</g>
+</svg>
+
+
+</div>
+    </div>
 <div class="titlename">
 	<img src="titlename.png" alt="">
 </div>
@@ -75,7 +372,7 @@ body{
     <h3>
     홍대 1번 출구
     </h3>
-    <p>자세한 위치는 통화상담 후 알려드립니다.</p>
+    <p>자세한 위치는<br> 통화상담 후 알려드립니다.</p>
     </div>
 </body>
 </html>

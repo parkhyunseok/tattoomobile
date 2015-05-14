@@ -4,11 +4,40 @@
 	<title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.icon').click(function(){ 
+              $("nav").slideToggle("slow");
+            });
+      });
+      window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 400 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#hide img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-1980px'}, 500 );
+        $("#hide img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
+
+});
+      </script>
 
 <style type="text/css">
 @media screen and (max-width: 500px) {
  ul{
-  padding-left: 13%;
+  padding-left: 8.5%;
  }
   }
 body{
@@ -40,7 +69,7 @@ body{
     padding: 0;
     width: 31.2%;
     box-shadow: 1px 1px 3px #AAA;
-    background-color: #FFF;
+    background-color: rgba(255,255,255,0.1);
     border-radius: 8px 8px 8px 8px;
   }
 
@@ -138,6 +167,9 @@ body{
   .purchase{
       margin-top:30px;
       margin-left: 80.1%;
+  }
+  a{
+    color: red;
   }
 </style>
 <body>
