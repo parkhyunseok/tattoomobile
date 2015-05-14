@@ -8,34 +8,144 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
       </script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $('.icon').click(function(){ 
-              $("nav").slideToggle("slow");
-            });
-      });
-      window.addEventListener('load', function() {
-    new FastClick(document.body);
-}, false);
-$(document).ready(function(){
-    $("#show").click(function(){
-        $(".one").animate({left: 0}, 400 );
-        $("#show img").hide();
-        $("#hide").show();
-        $("#hide img").show();
-    });
-    $("#hide").click(function(){
-        $(".one").animate({left: '-1980px'}, 500 );
-        $("#hide img").hide();
-        $("#hide").hide();
-        $("#show img").show();
-    });
-
-});
-      </script>
 
 <style type="text/css">
-@media screen and (max-width: 500px) {
+ .bars{
+    position:absolute;
+  width:33px;
+  height:18px;
+  margin-top:0px;
+  
+  left:50px;
+  top:35px;
+  font-size: 20px;
+    color: white;
+ }
+  .bars:hover{
+  
+    color: white;
+ }
+
+ul{
+  list-style-type: none;
+}
+li{
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+
+}
+a:hover{
+  color: red;
+}
+  .one {
+    background-color: black;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    right: 1980px;
+    bottom: 0;
+    position: fixed;
+  
+  z-index: 5;
+  opacity: 0.9;
+  }
+  .one ul:first-of-type {
+    padding-top: 10%;
+  }
+  .one ul{
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  .one ul li a{
+    color: lightgray;
+    font-family: DINEngschriftStd;
+  }
+  .one ul:first-child{
+    padding-bottom:20px;
+    border-bottom:solid 1px white;
+    font-family: DINEngschriftStd;
+  }
+
+
+  #show, #hide  {
+    width: 10%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+  }
+
+  #show:hover, #hide:hover  {
+    -webkit-filter: brightness(100%) opacity() grayscale(0);
+  }
+
+  #hide {
+    display: none;
+  }
+
+  
+    #show img, #hide img {
+    width: 20%;
+    margin-left: 35%;
+    float: left;
+    margin-top: 18%;
+    display: block;
+  }
+  #inforgraphic{
+    width:500px;
+    padding-top:100px;
+        margin: 0 auto;
+  }
+  
+  #totalbox{
+
+    transform:scale(1.3,1.3);
+  }
+    svg #number{
+      opacity: 0;
+    }
+    #totalbox:hover #typo{
+     opacity:0;
+     -webkit-transition: 0.4s ease;
+    }
+    #totalbox:hover #number{
+    opacity: 1;
+    -webkit-transform:translate(0px, -4px);
+    -webkit-transition: 0.3s 0.4s ease;
+    }
+    #bigcircle, #smallcircle{
+      -webkit-transform:scale(1,1);
+      opacity: .4;
+    }
+    #smallcircle{
+      -webkit-transform-origin:439px 168px;
+    }
+    #totalbox:hover #bigcircle{
+      opacity: 1;
+      -webkit-transition: 0.3s 0.4s ease;
+    }
+    #totalbox:hover #smallcircle{
+      opacity: 0.8;
+      
+      -webkit-transition: 0.3s 0.4s ease;
+      -webkit-transform:scale(1.3,1.3);
+    }
+    #poly{
+      -webkit-transform-origin:439px 168px;
+      -webkit-transform:scale(0,0);
+    }
+    #totalbox:hover #poly{
+        -webkit-transform:scale(1,1);
+        -webkit-transition: 0.3s 0.5s ease;
+    }
+@media screen and (max-width: 673px) {
  ul{
   padding-left: 8.5%;
  }
@@ -59,7 +169,7 @@ body{
     }
   .collection{
      margin: 10% auto;
-     margin-left: 10%;
+     margin-left: 8%;
   }
   .collection li{
     float:left;
@@ -68,8 +178,8 @@ body{
     margin: 1em 1%;
     padding: 0;
     width: 31.2%;
-    box-shadow: 1px 1px 3px #AAA;
-    background-color: rgba(255,255,255,0.1);
+    box-shadow: 1.5px 1.5px 3px #AAA;
+    background-color: rgba(255,255,255,1);
     border-radius: 8px 8px 8px 8px;
   }
 
@@ -169,10 +279,68 @@ body{
       margin-left: 80.1%;
   }
   a{
-    color: red;
+    color: gray;
   }
+  @media screen and (max-width: 673px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 29%;
+  }
+
+  }
+    @media screen and (max-width: 580px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:28%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 30%;
+  }
+
+    }
+    @media screen and (max-width: 470px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 44%;
+  }
+
+    }
+
+    @media screen and (max-width: 410px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 43%;
+  }
+    }
+
 </style>
 <body>
+
 <div class="titlename">
 	<img src="titlename.png" alt="">
 </div>
@@ -181,55 +349,55 @@ body{
   <a href="tattoocash.html">
   <li>
     <img src="10.jpg" class="drowing">
-    <h2>01</h2>
+    <h2>No.01</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
     <img src="50.jpg" class="drowing">
-    <h2>02</h2>
+    <h2>No.02</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="100.jpg" class="drowing">
-  <h2>03</h2>
+  <h2>No.03</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="200.jpg" class="drowing">
-  <h2>04</h2>
+  <h2>No.04</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="300.jpg" class="drowing">
-  <h2>05</h2>
+  <h2>No.05</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="400.jpg" class="drowing">
-  <h2>06</h2>
+  <h2>No.06</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="600.jpg" class="drowing">
-  <h2>07</h2>
+  <h2>No.07</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="700.jpg" class="drowing">
-  <h2>08</h2>
+  <h2>No.08</h2>
   </li>
 </a>
 <a href="tattoocash.html">
   <li>
   <img src="800.jpg" class="drowing">
-  <h2>09</h2>
+  <h2>No.09</h2>
   </li>
 </a>
 </ul>
