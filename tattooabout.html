@@ -35,14 +35,13 @@ $(document).ready(function(){
 <title>leviathan</title>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
-    #inforgraphic{
+#inforgraphic{
         width:500px;
         padding-top:100px;
         margin: 0 auto;
     }
     
     #totalbox{
-
         transform:scale(1.3,1.3);
     }
     svg #number{
@@ -73,14 +72,6 @@ $(document).ready(function(){
         
         -webkit-transition: 0.3s 0.4s ease;
         -webkit-transform:scale(1.3,1.3);
-    }
-    #poly{
-        -webkit-transform-origin:439px 168px;
-        -webkit-transform:scale(0,0);
-    }
-    #totalbox:hover #poly{
-        -webkit-transform:scale(1,1);
-        -webkit-transition: 0.3s 0.5s ease;
     }
 ul{
     list-style-type: none;
@@ -193,40 +184,18 @@ body{
             margin-top:50px;
             color: rgb(200,10,10);
         }
-        @media screen and (max-width: 768px) {
-       .one {
-        background-color: black;
-        width: 100%;
-        height: 90%;
-        position: absolute;
-        right: 1980px;
-        position: fixed;
-        top:8%;
-    
-    z-index: 5;
-    opacity: 0.8;
-    }
-    .one ul:first-of-type {
-        padding-top: 10%;
-    }
-    .one ul{
-        font-size: 20px;
-        text-align: center;
-        padding-right:10%;
-        line-height:200%;
-        
-    }
-    #inforgraphic{
-        display:none;
-    }
+        @media screen and (max-width: 500px) {
+                    .one ul {
+            margin-left: -10%;
+        }
         a{
-    font-size: 1.3em;
+    font-size: 1em;
 }
    .bars{
     position:absolute;
     margin-left: -35%;
     font-size: 30px;
-    margin-top:-15px;
+    margin-top:-13px;
     
     left:50px;
     top:35px;
@@ -234,7 +203,7 @@ body{
     }
   .titlename{
      margin:0 auto;
-  
+        margin-left: 18%;
         margin-right:15%;
         padding: 0;
         
@@ -245,7 +214,7 @@ body{
         text-align: center;
         margin: auto;
         margin-top: 20px;
-        margin-left: -5%;
+        margin-left: 20px;
     }
   div.titlename{
     padding: 0;
@@ -253,11 +222,10 @@ body{
 
 .Lo{
         font-family:DINEngschriftStd;
-        font-size:25px;
         margin: 0 auto;
         margin-top: 15px;
-        margin-left: -45%;
-       
+        margin-left: -35%;
+       font-size: 25px;
 
     }
     h3{
@@ -269,67 +237,13 @@ body{
     .text p:nth-of-type(2){
 text-align: left;
 margin-left: 24%;
-margin-top: 25px;
+margin-top: 30px;
 margin-right: 10%;
-line-height: 150%;
     }
-
+#inforgraphic{
+        display:none;
+    }
 }
-
-@media screen and (max-width: 673px){
-    
-    .titlename{
-        margin-top: 2%;
-    }
-    .titlename img{
-        text-align: center;
-        margin:10px auto;
-    }
-    }
-
-    @media screen and (max-width: 580px){
-    .titlename{
-        margin-top: 2%;
-    }
-    .titlename img{
-      width: 250px;
-        text-align: center;
-        margin:8px auto;
-        margin-left: 30px;
-    }
-    }
-
-    @media screen and (max-width: 475px){
-    .titlename{
-        margin-top: 2.4%;
-    }
-    .titlename img{
-      width: 240px;
-        text-align: center;
-        margin:7px auto;
-        margin-left: 16%;
-    }
-
-    .Lo{
-        margin-left: -43%;
-    }
-    }
-
-    @media screen and (max-width: 415px){
-    .titlename{
-        margin-top: 2.4%;
-    }
-    .titlename img{
-      width: 240px;
-        text-align: center;
-        margin:10px auto;
-        margin-left: 22%;
-    }
-    .Lo{
-        margin-left: -43%;
-    }
-    }
-
     </style>
     <body>
         <header>
@@ -342,7 +256,7 @@ line-height: 150%;
     </div>
 </header>
 <div class="titlename">
-    <a href="index.html"><img src="titlename.png" alt=""></a>
+	<img src="titlename.png" alt="">
 </div>
     <div class="one">
 <ul>
